@@ -15,7 +15,7 @@ struct NewsManager {
     var delegate: NewsManagerDelegate?
     
     func fetchLiveNews() {
-        let urlString = "\(API_URL)/news?access_key=\(API_KEY)&sources=en&offset=\(offset)"
+        let urlString = "\(API_URL)news?access_key=\(API_KEY)&sources=en&offset=\(offset)"
         performRequest(urlString: urlString)
     }
     

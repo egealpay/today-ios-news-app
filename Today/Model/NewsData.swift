@@ -20,14 +20,14 @@ struct Pagination: Codable {
 }
 
 struct News: Codable {
-    let author: String
-    let title: String
-    let description: String
-    let url: String
-    let source: String
-    let image: String
-    let category: String
-    let language: String
-    let country: String
-    let published_at: String
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: String?
+    let source: String?
+    let image: String?
+    let category: String?
+    let language: String?
+    let country: String?
+    let published_at: String?
 }

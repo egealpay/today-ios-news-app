@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="140" id="KGk-i7-Jjw" customClass="NewsCell" customModule="Today" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="643" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="643" height="131"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bpm-pl-gpe">
+                        <rect key="frame" x="10" y="10" width="613" height="111"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-cG-dsQ">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7P1-1v-4JY"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-CX-avH">
+                                <rect key="frame" x="160" y="0.0" width="453" height="111"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title Comes Here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="aX9-7h-vsl">
+                                        <rect key="frame" x="0.0" y="0.0" width="443" height="81"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date comes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84o-pN-lhb">
+                                        <rect key="frame" x="0.0" y="91" width="453" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="cA0-rt-FGW"/>
+                                            <constraint firstAttribute="height" constant="20" id="kMA-dn-HEW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aX9-7h-vsl" firstAttribute="top" secondItem="SRo-CX-avH" secondAttribute="top" id="9aV-RN-AwZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aX9-7h-vsl" secondAttribute="trailing" constant="10" id="EEW-kK-UQt"/>
+                                    <constraint firstItem="aX9-7h-vsl" firstAttribute="leading" secondItem="SRo-CX-avH" secondAttribute="leading" id="Fb9-jS-8fx"/>
+                                    <constraint firstItem="84o-pN-lhb" firstAttribute="leading" secondItem="SRo-CX-avH" secondAttribute="leading" id="Gb6-2C-cCk"/>
+                                    <constraint firstItem="84o-pN-lhb" firstAttribute="top" secondItem="aX9-7h-vsl" secondAttribute="bottom" constant="10" id="Nd4-mI-2Gd"/>
+                                    <constraint firstAttribute="bottom" secondItem="84o-pN-lhb" secondAttribute="bottom" id="eUj-g4-H9W"/>
+                                    <constraint firstAttribute="trailing" secondItem="84o-pN-lhb" secondAttribute="trailing" id="pcQ-jw-LDA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SRo-CX-avH" secondAttribute="bottom" id="6ib-R4-weg"/>
+                            <constraint firstItem="SRo-CX-avH" firstAttribute="top" secondItem="Bpm-pl-gpe" secondAttribute="top" id="BFm-dV-gBx"/>
+                            <constraint firstAttribute="trailing" secondItem="SRo-CX-avH" secondAttribute="trailing" id="Mgu-e7-k8B"/>
+                            <constraint firstItem="SRo-CX-avH" firstAttribute="leading" secondItem="Fpc-cG-dsQ" secondAttribute="trailing" constant="10" id="zJI-qK-VQE"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bpm-pl-gpe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Da0-lE-2Eu"/>
+                    <constraint firstItem="Bpm-pl-gpe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Fn5-ei-l1H"/>
+                    <constraint firstAttribute="trailing" secondItem="Bpm-pl-gpe" secondAttribute="trailing" constant="20" id="Ifa-Mf-9LR"/>
+                    <constraint firstAttribute="bottom" secondItem="Bpm-pl-gpe" secondAttribute="bottom" constant="10" id="eVx-Uc-XGi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newsDateLabel" destination="84o-pN-lhb" id="Haa-UC-dGI"/>
+                <outlet property="newsImageView" destination="Fpc-cG-dsQ" id="Y7B-Qw-S9h"/>
+                <outlet property="newsTitleLabel" destination="aX9-7h-vsl" id="WiY-Us-PUq"/>
+            </connections>
+            <point key="canvasLocation" x="-165.38461538461539" y="162.44075829383885"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
