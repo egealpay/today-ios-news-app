@@ -18,6 +18,8 @@
 		BA06E6F62748F26100A4B25A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06E6F42748F26100A4B25A /* NewsCell.swift */; };
 		BA06E6F72748F26100A4B25A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA06E6F52748F26100A4B25A /* NewsCell.xib */; };
 		BA06E6F927490AE200A4B25A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06E6F827490AE200A4B25A /* Constants.swift */; };
+		BA06E6FC2749439500A4B25A /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06E6FA2749439500A4B25A /* LoadingCell.swift */; };
+		BA06E6FD2749439500A4B25A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA06E6FB2749439500A4B25A /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BA06E6F42748F26100A4B25A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		BA06E6F52748F26100A4B25A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		BA06E6F827490AE200A4B25A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA06E6FA2749439500A4B25A /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		BA06E6FB2749439500A4B25A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				BA06E6E22748E1D900A4B25A /* LaunchScreen.storyboard */,
 				BA06E6F42748F26100A4B25A /* NewsCell.swift */,
 				BA06E6F52748F26100A4B25A /* NewsCell.xib */,
+				BA06E6FA2749439500A4B25A /* LoadingCell.swift */,
+				BA06E6FB2749439500A4B25A /* LoadingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 				BA06E6E42748E1D900A4B25A /* LaunchScreen.storyboard in Resources */,
 				BA06E6E12748E1D900A4B25A /* Assets.xcassets in Resources */,
 				BA06E6F72748F26100A4B25A /* NewsCell.xib in Resources */,
+				BA06E6FD2749439500A4B25A /* LoadingCell.xib in Resources */,
 				BA06E6DF2748E1D600A4B25A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +187,7 @@
 			files = (
 				BA06E6EF2748E57D00A4B25A /* NewsManager.swift in Sources */,
 				BA06E6DC2748E1D600A4B25A /* ViewController.swift in Sources */,
+				BA06E6FC2749439500A4B25A /* LoadingCell.swift in Sources */,
 				BA06E6D82748E1D600A4B25A /* AppDelegate.swift in Sources */,
 				BA06E6DA2748E1D600A4B25A /* SceneDelegate.swift in Sources */,
 				BA06E6F927490AE200A4B25A /* Constants.swift in Sources */,

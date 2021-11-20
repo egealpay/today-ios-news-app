@@ -1,5 +1,5 @@
 //
-//  NewsCell.swift
+//  LoadingCell.swift
 //  Today
 //
 //  Created by Ege Alpay on 20.11.2021.
@@ -7,11 +7,8 @@
 
 import UIKit
 
-class NewsCell: UITableViewCell {
-    @IBOutlet weak var newsImageView: UIImageView!
-    @IBOutlet weak var newsTitleLabel: UILabel!
-    @IBOutlet weak var newsDateLabel: UILabel!
-    @IBOutlet weak var loadingAnimation: UIActivityIndicatorView!
+class LoadingCell: UITableViewCell {
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

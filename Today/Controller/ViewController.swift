@@ -12,19 +12,29 @@ class ViewController: UIViewController {
     
     var newsManager = NewsManager()
     var news: [News] = []
+    var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         newsManager.delegate = self
         newsTableView.dataSource = self
+        newsTableView.delegate = self
         
         newsTableView.register(UINib(nibName: Constants.newsCellNibName, bundle: nil), forCellReuseIdentifier: Constants.newsCellIdentifier)
+        newsTableView.register(UINib(nibName: Constants.loadingCellNibName, bundle: nil), forCellReuseIdentifier: Constants.loadingCellIdentifier)
         
-        newsManager.fetchLiveNews()
+        loadData()
     }
     
-    
+    func loadData() {
+        print("loadData")
+        if !isLoading {
+            isLoading = true
+            print("fetchLiveNews")
+            newsManager.fetchLiveNews()
+        }
+    }
 }
 
 //MARK: - NewsManagerDelegate
@@ -37,8 +47,9 @@ extension ViewController: NewsManagerDelegate {
         
         DispatchQueue.main.async {
             // Update News Array
-            self.news = newsData.data
+            self.news += newsData.data
             self.newsTableView.reloadData()
+            self.isLoading = false
         }
     }
     
@@ -50,33 +61,60 @@ extension ViewController: NewsManagerDelegate {
 //MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        if section == 0 {
+            //Return the amount of items
+            return news.count
+        } else if section == 1 {
+            //Return the Loading cell
+            return 1
+        } else {
+            //Return nothing
+            return 0
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentNews = news[indexPath.row]
-        
-        // Cell'i MessageCell objesi olması için cast ettik.
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCellIdentifier, for: indexPath) as! NewsCell
-        
-        cell.newsTitleLabel.text = currentNews.title
-        cell.newsDateLabel.text = currentNews.published_at
-        
-        if let imageURL = currentNews.image {
-            if let url = URL(string: imageURL) {
-                cell.newsImageView.load(url: url)
+        if indexPath.section == 0 {
+            let currentNews = news[indexPath.row]
+            
+            // Cell'i MessageCell objesi olması için cast ettik.
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCellIdentifier, for: indexPath) as! NewsCell
+            
+            cell.newsTitleLabel.text = currentNews.title
+            cell.newsDateLabel.text = currentNews.published_at
+            
+            if let imageURL = currentNews.image {
+                if let url = URL(string: imageURL) {
+                    cell.newsImageView.load(url: url)
+                }
             }
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.loadingCellIdentifier, for: indexPath) as! LoadingCell
+            cell.loadingIndicator.startAnimating()
+            return cell
         }
+    }
+}
+//MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        return cell
+        if (scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.height < 100) && !isLoading {
+            loadData()
+        }
     }
 }
 
 //MARK: - URLImageView
 extension UIImageView {
     func load(url: URL) {
-        print("Image View Load Called")
-        
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
