@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Struct to store Constant values
 struct Constants {
     static let newsCellIdentifier = "newsCell"
     static let newsCellNibName = "NewsCell"

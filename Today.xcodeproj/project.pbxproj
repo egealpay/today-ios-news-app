@@ -85,12 +85,9 @@
 		BA06E6EB2748E44100A4B25A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA3D67E62749626A00AA9C14 /* Table Cells */,
 				BA06E6DD2748E1D600A4B25A /* Main.storyboard */,
 				BA06E6E22748E1D900A4B25A /* LaunchScreen.storyboard */,
-				BA06E6F42748F26100A4B25A /* NewsCell.swift */,
-				BA06E6F52748F26100A4B25A /* NewsCell.xib */,
-				BA06E6FA2749439500A4B25A /* LoadingCell.swift */,
-				BA06E6FB2749439500A4B25A /* LoadingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +107,17 @@
 				BA06E6DB2748E1D600A4B25A /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA3D67E62749626A00AA9C14 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BA06E6F42748F26100A4B25A /* NewsCell.swift */,
+				BA06E6F52748F26100A4B25A /* NewsCell.xib */,
+				BA06E6FA2749439500A4B25A /* LoadingCell.swift */,
+				BA06E6FB2749439500A4B25A /* LoadingCell.xib */,
+			);
+			path = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
