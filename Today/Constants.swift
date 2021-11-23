@@ -11,6 +11,9 @@ import Foundation
 struct Constants {
     static let newsCellIdentifier = "newsCell"
     static let newsCellNibName = "NewsCell"
+    
     static let loadingCellIdentifier = "loadingCell"
     static let loadingCellNibName = "LoadingCell"
+    
+    static let navigateToNewsDetails = "navigateToNewsDetails"
 }

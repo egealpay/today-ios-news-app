@@ -20,6 +20,7 @@
 		BA06E6F927490AE200A4B25A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06E6F827490AE200A4B25A /* Constants.swift */; };
 		BA06E6FC2749439500A4B25A /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06E6FA2749439500A4B25A /* LoadingCell.swift */; };
 		BA06E6FD2749439500A4B25A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA06E6FB2749439500A4B25A /* LoadingCell.xib */; };
+		BA92C7C8274D6AD400B8B412 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92C7C7274D6AD400B8B412 /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BA06E6F827490AE200A4B25A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA06E6FA2749439500A4B25A /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		BA06E6FB2749439500A4B25A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		BA92C7C7274D6AD400B8B412 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BA06E6DB2748E1D600A4B25A /* ViewController.swift */,
+				BA92C7C7274D6AD400B8B412 /* NewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				BA06E6D82748E1D600A4B25A /* AppDelegate.swift in Sources */,
 				BA06E6DA2748E1D600A4B25A /* SceneDelegate.swift in Sources */,
 				BA06E6F927490AE200A4B25A /* Constants.swift in Sources */,
+				BA92C7C8274D6AD400B8B412 /* NewsViewController.swift in Sources */,
 				BA06E6F62748F26100A4B25A /* NewsCell.swift in Sources */,
 				BA06E6F32748E7FF00A4B25A /* NewsData.swift in Sources */,
 			);

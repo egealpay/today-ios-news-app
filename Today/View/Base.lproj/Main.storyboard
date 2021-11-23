@@ -27,11 +27,45 @@
                     </view>
                     <connections>
                         <outlet property="newsTableView" destination="50f-fa-wtV" id="XbY-cv-WGU"/>
+                        <segue destination="ekz-29-wxc" kind="presentation" identifier="navigateToNewsDetails" id="fR3-vd-wc1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="mda-oY-SjX">
+            <objects>
+                <viewController id="ekz-29-wxc" customClass="NewsViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qm0-RI-vWu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-fJ-rUd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S7b-Na-Ha8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xnq-fJ-rUd" firstAttribute="top" secondItem="S7b-Na-Ha8" secondAttribute="top" id="MLG-pc-dGt"/>
+                            <constraint firstItem="Xnq-fJ-rUd" firstAttribute="bottom" secondItem="S7b-Na-Ha8" secondAttribute="bottom" id="OfP-bb-JbY"/>
+                            <constraint firstItem="Xnq-fJ-rUd" firstAttribute="leading" secondItem="S7b-Na-Ha8" secondAttribute="leading" id="SIL-VB-F4a"/>
+                            <constraint firstItem="Xnq-fJ-rUd" firstAttribute="trailing" secondItem="S7b-Na-Ha8" secondAttribute="trailing" id="nzk-fo-2bN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Xnq-fJ-rUd" id="5lP-9M-ylA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwY-Cd-OcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="100"/>
         </scene>
     </scenes>
     <resources>

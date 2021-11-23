@@ -27,7 +27,7 @@ struct NewsManager {
     
     // Fetches Live News
     func fetchLiveNews() {
-        let urlString = "\(API_URL)news?access_key=\(API_KEY)&sources=en&offset=\(offset)"
+        let urlString = "\(API_URL)news?sort=popularity&access_key=\(API_KEY)&sources=en&offset=\(offset)"
         performRequest(urlString: urlString)
     }
     

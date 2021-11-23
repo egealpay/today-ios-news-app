@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     // Boolean flag to control loading animation
     var isLoading = false
     
+    var selectedNewsURL = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +61,13 @@ class ViewController: UIViewController {
         
         return ""
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.navigateToNewsDetails { // Segue'in hangisi olduğu kontrol edilir.
+                let destinationVC = segue.destination as! NewsViewController // Gidilecek ekranı Segue'den alabiliriz.
+                destinationVC.newsURL = selectedNewsURL // Gidilecek ekrandaki bir değişkenin değerini değiştiririz.
+            }
+        }
 }
 
 //MARK: - NewsManagerDelegate
@@ -142,6 +151,18 @@ extension ViewController: UITableViewDelegate {
             loadData()
         }
     }
+    
+    // When Row selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentNews = news[indexPath.row]
+        
+        if let safeURL = currentNews.url {
+            selectedNewsURL = safeURL
+            self.performSegue(withIdentifier: Constants.navigateToNewsDetails, sender: self)
+        }
+    }
+    
+    
 }
 
 //MARK: - URLImageView
